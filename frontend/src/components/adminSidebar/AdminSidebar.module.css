@@ -1,0 +1,29 @@
+.sidebar{
+    border: 1px solid grey;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(242, 241, 241);
+    text-align: left;
+}
+.sidebar > div{
+    border: 1px solid grey;
+}
+.sidebar > div > a{
+    text-decoration: none;
+    color: black;
+}
+.sidebar > div > p{
+   padding: 10px 0;
+   padding: 0 20px;
+}
+.sidebar > div > ul{
+   background-color: rgb(215, 214, 214);
+}
+.sidebar > div > ul > li{
+   list-style: none;
+   padding: 20px 0;
+}
+.sidebar > div > ul > li > a{
+   text-decoration: none;
+   color: gray;
+}
