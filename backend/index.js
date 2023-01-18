@@ -67,15 +67,15 @@ const authentication = (req, res, next) => {
   });
 };
 
-app.use("/user", UserRouter);
-
-app.use(authentication);
-// All Routes
-app.use("/products", productRouter);
-// Welcome page
 app.get("/", (req, res) => {
   res.send("Welcome to Limesadak api");
 });
+
+app.use(authentication);
+app.use("/user", UserRouter);
+// All Routes
+app.use("/products", productRouter);
+// Welcome page
 
 app.listen(process.env.PORT, async () => {
   try {
