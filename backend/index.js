@@ -9,7 +9,6 @@ const {UserRouter} = require("./routes/user.route")
 const {RegisterModel} = require("./models/register.model")
 
 
-const app = express()
 
 app.use(express.json())
 
@@ -35,7 +34,7 @@ app.post("/register",async(req,res)=>{
         return res.send("Successfully Registered")
     } catch (error) {
         res.send("Please Register")
-    }    
+    }
 })
 
 app.post("/login",async (req,res)=>{
@@ -80,3 +79,29 @@ app.listen(8080,async ()=>{
     }
     console.log("Running at port 8080")
 })
+const express = require("express");
+const { connection } = require("./config/db");
+const { productRouter } = require("./routes/product.route");
+require("dotenv").config();
+
+const app = express();
+app.use(express.json());
+
+// All Routes
+app.use("/products", productRouter);
+
+// Welcome page
+app.get("/", (req, res) => {
+  res.send("Welcome to Limesadak api");
+});
+
+app.listen(process.env.PORT, async () => {
+  try {
+    await connection;
+    console.log(
+      `Database connected listening on port http://localhost:${process.env.PORT}`
+    );
+  } catch (err) {
+    console.log(err.message);
+  }
+});
