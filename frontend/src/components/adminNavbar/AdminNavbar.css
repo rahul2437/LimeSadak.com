@@ -1,0 +1,34 @@
+/* .logo{
+    width: 50px;
+    height: 30px;
+    border: 1px solid black;
+} */
+
+.admin{
+    /* border: 1px solid red; */
+    border-bottom: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+    width: 99%;
+    margin: auto;
+    align-items: center;
+    gap: 5%;
+}
+.input1{
+    display: flex;
+    justify-content:flex-start ;
+    /* border: 1px solid red; */
+    margin-left: -22%;
+    width: 40%;
+}
+.input{
+    width: 200%;
+    height: 20px;
+    
+    border-radius: 20px;
+}
+h1{
+    margin-right: 100px;
+    /* border: 1px solid red; */
+
+}
