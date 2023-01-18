@@ -87,3 +87,5 @@ app.listen(process.env.PORT, async () => {
     console.log(err.message);
   }
 });
+
+module.exports = app;
