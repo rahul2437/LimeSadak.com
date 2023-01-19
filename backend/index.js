@@ -55,10 +55,10 @@ app.post("/login", async (req, res) => {
 });
 
 const authentication = (req, res, next) => {
-  if (!req.headers.token) {
+  if (!req.headers.authorization) {
     return res.send({ response: "user not logged in" });
   }
-  const user_token = req.headers.token;
+  const user_token = req.headers.authorization;
   jwt.verify(user_token, process.env.secret, function (err, decoded) {
     if (err) {
       console.log(err);
