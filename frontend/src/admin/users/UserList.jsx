@@ -134,7 +134,7 @@ const UserList = () => {
     </div>
          {/* <h2>Recent Orders</h2> */}
 
-         <table>
+         <table className={style.userTable}>
           <thead>
             <tr>
             <td>Profile</td>

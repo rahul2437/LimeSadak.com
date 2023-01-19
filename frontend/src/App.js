@@ -11,9 +11,9 @@ import ProductList from './admin/products/ProductList';
 function App() {
   return (
     <div className="App">
-      <AdminNavbar />
-      
-      {/* <AllRoutes /> */}
+      {/* <AdminNavbar /> */}
+
+      <AllRoutes />
       {/* <VenderList/> */}
       {/* <UserList/> */}
       {/* <ProductList/> */}
