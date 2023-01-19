@@ -8,24 +8,30 @@
     /* border: 1px solid red; */
     border-bottom: 1px solid black;
     display: flex;
-    justify-content: space-between;
-    width: 99%;
+    justify-content: center;
+    width: 100%;
+    height: 90px;
     margin: auto;
     align-items: center;
-    gap: 5%;
+    gap: 25%;
 }
 .input1{
     display: flex;
     justify-content:flex-start ;
     /* border: 1px solid red; */
-    margin-left: -22%;
-    width: 40%;
+    /* margin: auto; */
+    margin-left: -18%;
+    margin-bottom: 3%;
+    width: 30%;
+    height: 50%;
+    padding: 30px;
 }
 .input{
     width: 200%;
     height: 20px;
     
     border-radius: 20px;
+    
 }
 h1{
     margin-right: 100px;
