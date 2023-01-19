@@ -118,8 +118,10 @@ const topProd=[
 
 const Dashboard = () => {
   return (
-    <div className={style.container}>
-      <AdminNavbar/>
+    <>
+    <AdminNavbar/>
+    <div className={style.dashboard}>
+      
       <div className={style.left}>
         <AdminSidebar/>
       </div>
@@ -203,6 +205,7 @@ const Dashboard = () => {
       </div>
 
     </div>
+    </>
   )
 }
 

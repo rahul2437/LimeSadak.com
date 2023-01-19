@@ -134,7 +134,7 @@ const VenderList = () => {
     </div>
          {/* <h2>Recent Orders</h2> */}
 
-         <table>
+         <table className={style.vendorList}>
           <thead>
             <tr>
             <td>Profile</td>

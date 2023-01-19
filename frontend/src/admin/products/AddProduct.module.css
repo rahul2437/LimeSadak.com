@@ -1,0 +1,10 @@
+.addProduct{
+    display: flex;
+    
+}
+.addProduct > .left{
+    width: 17%;
+}
+.addProduct > .right{
+    width: 83%;
+}
