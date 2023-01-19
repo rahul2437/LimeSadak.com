@@ -125,7 +125,7 @@ const UserList = () => {
     <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
     <div style={{display:"grid"}}>
         <Heading mr="300px" mt="40px" >User List</Heading>
-        <a herf="/"><Heading  mr="300px" mt="40px" size={"md"} >  Home  > <span> User </span> </Heading></a>
+        <a herf="/"><Heading  mr="300px" mt="40px" size={"md"} >  Home   <span> User </span> </Heading></a>
         </div>
 
         <div>

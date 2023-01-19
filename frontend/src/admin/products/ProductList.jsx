@@ -135,7 +135,7 @@ const ProductList = () => {
     <div style={{display:"flex", justifyContent:"center", alignItems:"center"}}>
     <div style={{display:"grid"}}>
         <Heading mr="300px" mt="40px" >Product List</Heading>
-        <a herf="/"><Heading  mr="300px" mt="40px" size={"md"} >  Home  > <span> Product </span> </Heading></a>
+        <a herf=""><Heading  mr="300px" mt="40px" size={"md"} >  Home   <span> Product </span> </Heading></a>
         </div>
 
         <div>
