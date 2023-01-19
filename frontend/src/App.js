@@ -16,7 +16,7 @@ function App() {
       {/* <AllRoutes /> */}
       {/* <VenderList/> */}
       {/* <UserList/> */}
-      <ProductList/>
+      {/* <ProductList/> */}
     </div>
   );
 }
