@@ -12,9 +12,13 @@ exports.signin = (req, res) => {
           .send({ message: "User does not exist, Please register" });
       if (user) {
         if (user.authenticate(password)) {
-          const token = jwt.sign({ _id: user._id }, process.env.secret, {
-            expiresIn: "3h",
-          });
+          const token = jwt.sign(
+            { _id: user._id, role: user.role },
+            process.env.secret,
+            {
+              expiresIn: "3h",
+            }
+          );
           const { _id, name, email, role } = user;
           return res.status(200).send({
             token,
