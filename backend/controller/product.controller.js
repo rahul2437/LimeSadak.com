@@ -43,11 +43,15 @@ exports.getProducts = async (req, res) => {
 };
 
 exports.addProduct = async (req, res) => {
-  const payload = { ...req.body, user: req.user._id };
+  req.body.category = req.body.category.trim().split(" ");
+  req.body.tags = req.body.tags.trim().split(" ");
+  req.body.size = req.body.size.trim().split(" ");
+  let payload = { ...req.body, user: req.user._id };
+  console.log(payload);
   try {
     const product = new Product(payload);
     product.save();
-    res.send({ message: "Products Added successfully" });
+    res.send({ message: "Products Added successfully", product });
   } catch (err) {
     res.send({ message: "Failed to add product" });
   }

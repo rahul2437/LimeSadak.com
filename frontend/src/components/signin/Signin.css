@@ -1,0 +1,33 @@
+h1 {
+  font-size: 38px;
+}
+
+#signin-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 600px;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+#signin {
+  grid-column: 1 / span 2;
+  background-color: greenyellow;
+}
+#signin:hover {
+  background-color: green;
+}
+#signin-form > label {
+  padding: 5px 20px;
+  border: 1px solid black;
+}
+#signin-form input {
+  padding: 5px 20px;
+  border: 1px solid black;
+}
+#signin-form > select {
+  padding: 5px 20px;
+  border: 1px solid black;
+}

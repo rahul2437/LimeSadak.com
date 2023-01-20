@@ -277,3 +277,4 @@ Get FLAT 10% OFF on your purchase on payment via Paytm/ GPay/ PhonePe/ Net Banki
 }
 
 export default Home
+
