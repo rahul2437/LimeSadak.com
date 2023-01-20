@@ -2,6 +2,7 @@ const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
 require("./models/product.model");
+const fs = require("fs");
 
 const { connection } = require("./config/db");
 const { userRouter } = require("./routes/user.route");
@@ -17,7 +18,13 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("Welcome to Limesadak api");
+  fs.readFile("./index.html", (err, data) => {
+    if (err) {
+      return res.send("Welcome to Limesadak api");
+    } else {
+      return res.write(data);
+    }
+  });
 });
 
 app.use("/user", userRouter);
