@@ -13,10 +13,11 @@ function App() {
     <div className="App">
       <AdminNavbar />
       
-      {/* <AllRoutes /> */}
+      <AllRoutes />
       {/* <VenderList/> */}
       {/* <UserList/> */}
       {/* <ProductList/> */}
+
     </div>
   );
 }

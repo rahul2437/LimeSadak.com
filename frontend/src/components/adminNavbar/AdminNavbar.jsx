@@ -4,6 +4,7 @@ import { ChevronDownIcon, Search2Icon ,DragHandleIcon, EmailIcon, StarIcon, Sett
 // import {CgProfile} from "re"
 import "./AdminNavbar.css"
 import logo from "../../../src/assets/limesadak.jpg"
+import { Link } from 'react-router-dom'
 
 const AdminNavbar = () => {
   return (
@@ -34,8 +35,9 @@ const AdminNavbar = () => {
   </MenuList>
 </Menu>
 
-<BellIcon ml="10px" w="30px" h="40px" gap="5px"/>
-<SettingsIcon ml="20px" w="30px" h="40px"/>
+  <Link to="/cart"> <BellIcon ml="10px" w="30px" h="40px" gap="5px"/></Link>
+  <Link to="/payment"><SettingsIcon ml="20px" w="30px" h="40px"/></Link>
+
 </Box>
 
       
