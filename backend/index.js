@@ -22,7 +22,8 @@ app.get("/", (req, res) => {
     if (err) {
       return res.send("Welcome to Limesadak api");
     } else {
-      return res.write(data);
+      res.write(data);
+      res.end();
     }
   });
 });
