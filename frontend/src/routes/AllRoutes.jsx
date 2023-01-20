@@ -12,6 +12,7 @@ import Login from '../admin/login/Login'
 import SingalProductP from '../pages/order/SingalProductP'
 import Cart from '../../src/pages/order/Cart'
 import Payment from '../pages/order/Payment';
+
 import Home from '../pages/homepage/Home';
 
 const AllRoutes = () => {
@@ -34,6 +35,11 @@ const AllRoutes = () => {
         <Route path='/add-product' element={<AddProduct/>}></Route>
 
         {/* User Routes */}
+
+
+        <Route path='/' element={<Home/>}></Route>
+        
+
       </Routes>
     </div>
   );
