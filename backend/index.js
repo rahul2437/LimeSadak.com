@@ -20,10 +20,12 @@ app.use(
 app.get("/", (req, res) => {
   fs.readFile("./index.html", (err, data) => {
     if (err) {
-      return res.send("Welcome to Limesadak api");
+      return res.send(
+        "Welcome to Limesadak api, Sorry server error cannot show Usage now"
+      );
     } else {
       res.write(data);
-      res.end();
+      res.send(data);
     }
   });
 });
