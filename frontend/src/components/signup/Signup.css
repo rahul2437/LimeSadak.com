@@ -1,0 +1,33 @@
+h1 {
+  font-size: 38px;
+}
+
+#signup-form {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 1rem;
+  width: 600px;
+  margin: 2rem auto;
+  gap: 1rem;
+}
+#signup {
+  grid-column: 1 / span 2;
+  background-color: greenyellow;
+}
+#signup:hover {
+  background-color: green;
+}
+#signup-form > label {
+  padding: 5px 20px;
+  border: 1px solid black;
+}
+#signup-form input {
+  padding: 5px 20px;
+  border: 1px solid black;
+}
+#signup-form > select {
+  padding: 5px 20px;
+  border: 1px solid black;
+}
