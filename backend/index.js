@@ -18,15 +18,17 @@ app.use(
 );
 
 app.get("/", (req, res) => {
+  res.writeHead(200, { "Content-Type": "text/html" });
   fs.readFile("./index.html", (err, data) => {
     if (err) {
-      return res.send(
+      res.write(
         "Welcome to Limesadak api, Sorry server error cannot show Usage now"
       );
+      res.end();
     } else {
       res.write(data);
-      res.send(data);
     }
+    res.end();
   });
 });
 
