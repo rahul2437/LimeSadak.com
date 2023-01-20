@@ -30,11 +30,11 @@ const productValidate = (req, res, next) => {
     !typeof name === "string" ||
     !typeof brand === "string" ||
     !typeof description === "string" ||
-    !Array.isArray(category) ||
+    !typeof category === "string" ||
     !typeof color === "string" ||
     !typeof gender === "string" ||
-    !Array.isArray(tags) ||
-    !Array.isArray(size) ||
+    !typeof tags === "string" ||
+    !typeof size === "string" ||
     !typeof stock === "number" ||
     !typeof price === "number"
   ) {
