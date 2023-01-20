@@ -53,6 +53,22 @@ productRouter.post("/add", productValidate, async (req, res) => {
   }
 });
 
+productRouter.get("/:id", async (req, res) => {
+  const _id = req.params.id;
+  try {
+    let data = await Product.findOne({ _id });
+    data
+      ? res.send({
+          message: "Product found",
+          data,
+        })
+      : res.send({
+          message: "No Product found",
+        });
+  } catch (err) {
+    res.send({ message: "Failed to fetch", error: err.message });
+  }
+});
 productRouter.put("/:id", async (req, res) => {
   const _id = req.params.id;
   const payload = req.body;
