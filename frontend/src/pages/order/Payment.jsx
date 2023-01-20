@@ -9,7 +9,7 @@ import PriceDetails from "../../components/Cart-Components/PriceDetails";
 import { Text } from "../../components/Cart-Components/StyledComponents";
 import {Input,InputContainer,InputLabel} from "../../components/Cart-Components/ContentDetails";
 import Button from "../../components/Cart-Components/Button";
-import { setCartEmpty } from "../../Redux/AuthReducer/action";
+import { setCartEmpty } from "../../Redux/CartReducer/action";
 import { useDispatch } from "react-redux";
 import { Navigate } from "react-router";
 

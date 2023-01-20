@@ -4,6 +4,7 @@
     height: 100vh;
     background-color: rgb(242, 241, 241);
     text-align: left;
+    padding-top: 20px;
 }
 .sidebar > div{
     border: 1px solid grey;

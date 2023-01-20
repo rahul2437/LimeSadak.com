@@ -12,7 +12,7 @@ import {
   modifyItemQuantity,
   modifyItemSize,
   removeFromCart,
-} from "../../Redux/AuthReducer/action";
+} from "../../Redux/CartReducer/action";
 
 const quantityItem = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
 

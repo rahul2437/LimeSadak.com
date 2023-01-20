@@ -1,25 +1,19 @@
-const express = require("express");
-const cors = require("cors");
-require("dotenv").config();
-require("./models/product.model");
-const fs = require("fs");
-
-const { connection } = require("./config/db");
-const { userRouter } = require("./routes/user.route");
-const { productRouter } = require("./routes/product.route");
-const { adminRouter } = require("./routes/admin/admin.route");
-const { cartRouter } = require("./routes/cart.route");
-const app = express();
-app.use(express.json());
-app.use(
-  cors({
-    origin: "*",
-  })
-);
-
-app.get("/", (req, res) => {
-  res.send(`
-      <div id="main">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limesadak API</title>
+    <style>
+      span {
+        color: blue;
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
       <h1>Welcome to Limesadak API</h1>
     </div>
     <div>
@@ -88,23 +82,5 @@ app.get("/", (req, res) => {
         </li>
       </ul>
     </div>
-  `);
-});
-
-app.use("/user", userRouter);
-app.use("/admin", adminRouter);
-app.use("/products", productRouter);
-app.use("/cart", cartRouter);
-
-app.listen(process.env.PORT, async () => {
-  try {
-    await connection;
-    console.log(
-      `Database connected listening on port http://localhost:${process.env.PORT}`
-    );
-  } catch (err) {
-    console.log(err.message);
-  }
-});
-
-module.exports = app;
+  </body>
+</html>

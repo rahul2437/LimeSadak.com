@@ -1,11 +1,11 @@
-select{
+/* select{
     font-size: 2rem;
     padding: 0.5% 1%;
     margin-top: 30px;
     display: block;
     margin-inline: auto;
-}
-table {
+} */
+.userTable {
     width: 74%;
     margin: auto;
     margin-left: 25%;
@@ -13,7 +13,7 @@ table {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     text-align: center;
   }
-  thead {
+  .userTable >  thead {
     background-color: #e2e1dd;
     /* color:white; */
 
@@ -22,7 +22,7 @@ table {
   th {
     font-size: 25px;
   }
-  tbody {
+  .userTable > tbody {
     font-size: 18px;
   }
   td{
