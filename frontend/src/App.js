@@ -6,13 +6,15 @@ import AdminNavbar from './components/adminNavbar/AdminNavbar';
 import VenderList from './admin/vendors/VenderList';
 import UserList from './admin/users/UserList';
 import ProductList from './admin/products/ProductList';
+import Home from './pages/homepage/Home';
+import Navbar from './components/navbar/Navbar';
 
 
 function App() {
   return (
     <div className="App">
       {/* <AdminNavbar /> */}
-
+      <Navbar />
       <AllRoutes />
       {/* <VenderList/> */}
       {/* <UserList/> */}

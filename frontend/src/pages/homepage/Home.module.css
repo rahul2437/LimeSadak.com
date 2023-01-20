@@ -1,0 +1,36 @@
+.main{
+    /* border: 1px solid red; */
+    width: 1000px;
+    margin: auto;
+    padding-top: 70px;
+}
+.section1{
+   /* border: 1px solid red; */
+   padding: 30px 0;
+}
+
+.feed{
+    display: flex;
+}
+.section2 > .top{
+    padding: 15px 0;
+    border-top: 4px  solid #5daef3;
+    background-color: #e8f3fe;
+}
+.section2 > .bottom{
+    /* border: 1px solid red; */
+    display: flex;
+    width: 100%;
+}
+.section2 > .bottom > img{
+   width: 50%;
+}
+
+/* Section - 3 */
+
+.section3{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 10px;
+}

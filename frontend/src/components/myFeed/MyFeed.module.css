@@ -1,0 +1,11 @@
+.myFeed{
+    text-align: center;
+}
+.myFeed > img{
+    width: 60%;
+    margin: auto;
+    margin-bottom: 10px;
+}
+.myFeed > p{
+    font-size: 10px;
+}
