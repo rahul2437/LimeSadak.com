@@ -5,7 +5,6 @@ import styles from "./SingalProductP.module.css";
 // import { getLocalData } from "../Utils/helperFuns";
 import { addToCart, addToWishList } from "../../redux/CartReducer/action";
 import { useDispatch } from "react-redux";
-import { addToCart, addToWishList } from "../../redux/CartReducer/action";
 // import Footer from "../Components/Footer/Footer";
 // import Navbar from "../Components/Navbar";
 
