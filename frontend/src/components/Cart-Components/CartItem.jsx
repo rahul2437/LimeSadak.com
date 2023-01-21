@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-import Image from "./Image";
 import { BiCheck } from "react-icons/bi";
-import { MdArrowDropDown, MdClose } from "react-icons/md";
-import PopUpMenu from "./PopUpMenu";
-import { Text } from "./StyledComponents";
-import Button from "./Button";
+import { MdClose } from "react-icons/md";
 import { useDispatch } from "react-redux";
+import styled from "styled-components";
 import {
   addToWishList,
   modifyItemQuantity,
   modifyItemSize,
   removeFromCart,
-} from "../../Redux/CartReducer/action";
+} from "../../redux/CartReducer/action";
+import Button from "./Button";
+import Image from "./Image";
+import PopUpMenu from "./PopUpMenu";
+import { Text } from "./StyledComponents";
 
 const quantityItem = ["2", "3", "4", "5", "6", "7", "8", "9", "10"];
 

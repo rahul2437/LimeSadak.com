@@ -1,19 +1,20 @@
-import React from "react";
-import { useState } from "react";
-import CartNav from "../../components/Cart-Components/CartNav";
+import React, { useState } from "react";
 import { BsFillPatchCheckFill } from "react-icons/bs";
-import styled from "styled-components";
-import LeftContentBox from "../../components/Cart-Components/LeftContentBox";
-import RightContentBox from "../../components/Cart-Components/RightContentBox";
-import PriceDetails from "../../components/Cart-Components/PriceDetails";
-import { Text } from "../../components/Cart-Components/StyledComponents";
-import {Input,InputContainer,InputLabel} from "../../components/Cart-Components/ContentDetails";
-import Button from "../../components/Cart-Components/Button";
-import { setCartEmpty } from "../../Redux/CartReducer/action";
 import { useDispatch } from "react-redux";
 import { Navigate } from "react-router";
-
-
+import styled from "styled-components";
+import Button from "../../components/Cart-Components/Button";
+import CartNav from "../../components/Cart-Components/CartNav";
+import {
+  Input,
+  InputContainer,
+  InputLabel,
+} from "../../components/Cart-Components/ContentDetails";
+import LeftContentBox from "../../components/Cart-Components/LeftContentBox";
+import PriceDetails from "../../components/Cart-Components/PriceDetails";
+import RightContentBox from "../../components/Cart-Components/RightContentBox";
+import { Text } from "../../components/Cart-Components/StyledComponents";
+import { setCartEmpty } from "../../redux/CartReducer/action";
 
 const Payment = () => {
   const [capcha, setCapcha] = useState("");
