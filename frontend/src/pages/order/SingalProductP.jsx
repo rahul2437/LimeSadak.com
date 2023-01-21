@@ -1,18 +1,46 @@
 import React from "react";
-import styles from "./SingalProductP.module.css";
-import { BsFillStarFill, BsFillBagFill, BsFillHeartFill } from "react-icons/bs";
 import { AiOutlineRight } from "react-icons/ai";
+import { BsFillBagFill, BsFillHeartFill, BsFillStarFill } from "react-icons/bs";
+import styles from "./SingalProductP.module.css";
 // import { getLocalData } from "../Utils/helperFuns";
 import { addToCart, addToWishList } from "../../redux/CartReducer/action";
 import { useDispatch } from "react-redux";
+import { addToCart, addToWishList } from "../../redux/CartReducer/action";
 // import Footer from "../Components/Footer/Footer";
 // import Navbar from "../Components/Navbar";
 
 function SingleProductP() {
   // temp Comment
-  
+
   // let p = getLocalData("singlePageData");
-  const p ={"product_ratingsContainer":4.2,"product_ratingsCount":5,"product-separator":"|","product_base_href":"https://www.myntra.com/tshirts/the-souled-store/the-souled-store-men-navy-blue-psg-messi-back-print-oversized-t-shirt/20059494/buy","img_responsive_src":"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20059494/2022/9/17/c89121dc-e7e5-4c87-a0c5-6a5eab2c37751663433848919TheSouledStoreMenNavyBlueParisSaint-GermainLionelMessiDrop-S1.jpg","product_brand":"The Souled Store","product_product":"Men Varsity Printed Loose T-shirt","product_sizeInventoryPresent":"XXS,","product_sizeInventoryPresent_2":"XS,","product_sizeInventoryPresent_3":"S,","product_sizeInventoryPresent_4":"M,","product_sizeInventoryPresent_5":"L,","product_sizeInventoryPresent_6":"XL,","product_sizeInventoryPresent_7":"XXL,","product_sizeInventoryPresent_8":"3XL","product_discountedPrice":"Rs. 1049","product_strike":"Rs. 1299","product_discountPercentage":"(Rs. 250 OFF)","product_sizeButton":"XS","product_sizeButton_2":"S","product_sizeButton_3":"M","product_sizeButton_4":"L","product_sizeButton_5":"XL","product_sizeButton_6":"XXL"}
+  const p = {
+    product_ratingsContainer: 4.2,
+    product_ratingsCount: 5,
+    "product-separator": "|",
+    product_base_href:
+      "https://www.myntra.com/tshirts/the-souled-store/the-souled-store-men-navy-blue-psg-messi-back-print-oversized-t-shirt/20059494/buy",
+    img_responsive_src:
+      "https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20059494/2022/9/17/c89121dc-e7e5-4c87-a0c5-6a5eab2c37751663433848919TheSouledStoreMenNavyBlueParisSaint-GermainLionelMessiDrop-S1.jpg",
+    product_brand: "The Souled Store",
+    product_product: "Men Varsity Printed Loose T-shirt",
+    product_sizeInventoryPresent: "XXS,",
+    product_sizeInventoryPresent_2: "XS,",
+    product_sizeInventoryPresent_3: "S,",
+    product_sizeInventoryPresent_4: "M,",
+    product_sizeInventoryPresent_5: "L,",
+    product_sizeInventoryPresent_6: "XL,",
+    product_sizeInventoryPresent_7: "XXL,",
+    product_sizeInventoryPresent_8: "3XL",
+    product_discountedPrice: "Rs. 1049",
+    product_strike: "Rs. 1299",
+    product_discountPercentage: "(Rs. 250 OFF)",
+    product_sizeButton: "XS",
+    product_sizeButton_2: "S",
+    product_sizeButton_3: "M",
+    product_sizeButton_4: "L",
+    product_sizeButton_5: "XL",
+    product_sizeButton_6: "XXL",
+  };
   const dispatch = useDispatch();
 
   let productSize = ["XS", "S", "M", "L", "XL", "XXL", "3XL", "4XL"];
@@ -118,6 +146,5 @@ function SingleProductP() {
 }
 
 export default SingleProductP;
-
 
 // {"product_ratingsContainer":4.2,"product_ratingsCount":5,"product-separator":"|","product_base_href":"https://www.myntra.com/tshirts/the-souled-store/the-souled-store-men-navy-blue-psg-messi-back-print-oversized-t-shirt/20059494/buy","img_responsive_src":"https://assets.myntassets.com/dpr_2,q_60,w_210,c_limit,fl_progressive/assets/images/20059494/2022/9/17/c89121dc-e7e5-4c87-a0c5-6a5eab2c37751663433848919TheSouledStoreMenNavyBlueParisSaint-GermainLionelMessiDrop-S1.jpg","product_brand":"The Souled Store","product_product":"Men Varsity Printed Loose T-shirt","product_sizeInventoryPresent":"XXS,","product_sizeInventoryPresent_2":"XS,","product_sizeInventoryPresent_3":"S,","product_sizeInventoryPresent_4":"M,","product_sizeInventoryPresent_5":"L,","product_sizeInventoryPresent_6":"XL,","product_sizeInventoryPresent_7":"XXL,","product_sizeInventoryPresent_8":"3XL","product_discountedPrice":"Rs. 1049","product_strike":"Rs. 1299","product_discountPercentage":"(Rs. 250 OFF)","product_sizeButton":"XS","product_sizeButton_2":"S","product_sizeButton_3":"M","product_sizeButton_4":"L","product_sizeButton_5":"XL","product_sizeButton_6":"XXL"}
