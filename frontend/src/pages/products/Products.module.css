@@ -1,0 +1,23 @@
+.products{
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+    width: 98%;
+    margin: auto;
+}
+.products > .left{
+    width: 16%;
+    /* border: 1px solid grey; */
+    position: fixed;
+}
+.products > .right{
+    width: 83%;
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 0 110px;
+    gap: 20px;
+    position: relative;
+    left: 17%;
+}
