@@ -51,3 +51,30 @@ exports.signup = (req, res) => {
     return res.status(500).send({ message: "Something went wrong", err });
   }
 };
+
+exports.getAllUsers = (req, res) => {
+  try {
+    User.find({ role: "user" }).exec((err, user) => {
+      if (err) {
+        return res.status(500).send({ message: "Something went wrong", err });
+      } else {
+        return res.status(200).send({ total: user.length, user });
+      }
+    });
+  } catch (err) {
+    return res.status(500).send({ message: "Something went wrong", err });
+  }
+};
+exports.getAllVendors = (req, res) => {
+  try {
+    User.find({ role: "vendor" }).exec((err, user) => {
+      if (err) {
+        return res.status(500).send({ message: "Something went wrong", err });
+      } else {
+        return res.status(200).send({ total: user.length, user });
+      }
+    });
+  } catch (err) {
+    return res.status(500).send({ message: "Something went wrong", err });
+  }
+};
