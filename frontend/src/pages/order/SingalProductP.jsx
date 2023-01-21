@@ -3,7 +3,7 @@ import styles from "./SingalProductP.module.css";
 import { BsFillStarFill, BsFillBagFill, BsFillHeartFill } from "react-icons/bs";
 import { AiOutlineRight } from "react-icons/ai";
 // import { getLocalData } from "../Utils/helperFuns";
-import { addToCart, addToWishList } from "../../Redux/CartReducer/action";
+import { addToCart, addToWishList } from "../../redux/CartReducer/action";
 import { useDispatch } from "react-redux";
 // import Footer from "../Components/Footer/Footer";
 // import Navbar from "../Components/Navbar";

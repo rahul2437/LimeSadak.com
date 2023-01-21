@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Navigate } from "react-router";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
-import { updateAddress } from "../../Redux/CartReducer/action";
+import { updateAddress } from "../../redux/CartReducer/action";
 import Button from "./Button";
 
 const states = [
