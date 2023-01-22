@@ -1,33 +1,68 @@
-h1 {
-  font-size: 38px;
+.container{
+  border: 1px solid red;
+  padding-top: 70px;
+  height: 100vh;
+}
+.container > .top{
+  /* border: 1px solid black; */
+  width: 30%;
+  margin: 70px auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: white;
+}
+.container > .top > img{
+  width: 20%;
+}
+.container > .top > div{
+  /* border: 1px solid green; */
+  /* display: flex; */
+  text-align: left;
+}
+.container > .top > div > img{
+  width: 10%;
+  margin-right: 10px;
+  display: inline;
+}
+.container > .top > div > img + span{
+  font-size: 25px;
 }
 
-#signin-form {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  border: 1px solid black;
-  border-radius: 15px;
-  padding: 1rem;
-  width: 600px;
-  margin: 2rem auto;
-  gap: 1rem;
+/* BOTTOM */
+
+.bottom{
+  /* border: 1px solid blue; */
+  width: 30%;
+  margin: auto;
+  display: flex;
+  margin-top: 50px;
 }
-#signin {
-  grid-column: 1 / span 2;
-  background-color: greenyellow;
+.bottom > form{
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+  width: 100%;
 }
-#signin:hover {
-  background-color: green;
+.bottom > form > input,  .bottom > form > select{
+  width: 100%;
+  padding: 10px 5px;
+  border-bottom: 1px solid black;
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0);
 }
-#signin-form > label {
-  padding: 5px 20px;
-  border: 1px solid black;
+.bottom > form > input:last-child{
+  background-color: grey;
+  border-radius: 7px;
+  margin-top: 45px;
+  border-bottom: none;
+  cursor: pointer;
 }
-#signin-form input {
-  padding: 5px 20px;
-  border: 1px solid black;
-}
-#signin-form > select {
-  padding: 5px 20px;
-  border: 1px solid black;
+
+
+@media all and (min-width:320px) and (max-width:481px){
+  .container > .top, .bottom{
+    width: 90%;
+  }
 }
