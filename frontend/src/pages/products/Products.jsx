@@ -1,13 +1,10 @@
-import React from 'react'
-import style from './Products.module.css'
-import Navbar from '../../components/navbar/Navbar'
-import ProdSidebar from '../../components/prodSidebar/ProdSidebar'
-import ProdBox from '../../components/prodBox/ProdBox'
-import {useSelector, useDispatch} from 'react-redux';
-import { getProductsSuccess } from '../../redux/ProductsReducer/actionCreator'
-
-
-
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import ProdBox from "../../components/prodBox/ProdBox";
+import ProdSidebar from "../../components/prodSidebar/ProdSidebar";
+import { getProductsSuccess } from "../../redux/ProductsReducer/actionCreator";
+import style from "./Products.module.css";
 // const prod=[
 //     {
 //         img:"https://img3.junaroad.com/uiproducts/18823471/zoom_0-1674018312.jpg",
@@ -65,53 +62,51 @@ import { getProductsSuccess } from '../../redux/ProductsReducer/actionCreator'
 //     }
 // ]
 
-const Products = async() => {
-    const { token } = useSelector((store) => store.AuthReducer);
-    const dispatch= useDispatch();
-    const {products} = useSelector((store) => store.ProductsReducer);
-    
+const Products = () => {
+  const { token } = useSelector((store) => store.AuthReducer);
+  const dispatch = useDispatch();
+  const { products } = useSelector((store) => store.ProductsReducer);
+
+  useEffect(() => {
     try {
-        let res = await fetch(
-          `https://general-icicle-9828.vercel.app/products`,
-          {
-            method: "GET",
-            headers: {
-              "Content-Type": "application/json",
-              Authorization: token,
-            },
-          }
-        );
-        let data = await res.json();
-        dispatch(getProductsSuccess(data.data))
-      } catch (error) {
-        console.log({ error });
-      }
+      let res = fetch(`https://general-icicle-9828.vercel.app/products`, {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: token,
+        },
+      });
+      let data = res.json();
+      dispatch(getProductsSuccess(data.data));
+    } catch (error) {
+      console.log({ error });
+    }
+  }, []);
 
   return (
     <>
-     <Navbar/>
+      <h1>Hello</h1>
       <div className={style.products}>
         <div className={style.left}>
-            <ProdSidebar/>
+          <ProdSidebar />
         </div>
         <div className={style.right}>
-            {
-                products.map((prod)=>{
-                    return <ProdBox 
-                        key={prod._id}
-                        // img={prod.img}
-                        price={prod.price}
-                        // discPrice={prod.discPrice}
-                        // author={prod.author}
-                    />
-                })
-            }
-            
+          {products.map((prod, i) => {
+            return (
+              <Link to={`/singalproduct/${prod._id}`}>
+                <ProdBox
+                  key={i + 2}
+                  name={prod.name}
+                  price={prod.price}
+                  brand={prod.brand}
+                />
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>
-    
-  )
-}
+  );
+};
 
-export default Products
+export default Products;
