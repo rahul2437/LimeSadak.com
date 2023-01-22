@@ -1,10 +1,24 @@
-.addProduct{
-    display: flex;
-    
+.addProduct {
+  display: flex;
 }
-.addProduct > .left{
-    width: 17%;
+.addProduct > .left {
+  width: 17%;
 }
-.addProduct > .right{
-    width: 83%;
+.addProduct > .right {
+  width: 83%;
+}
+.row1 {
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  width: 600px;
+  gap: 1rem;
+}
+.row1 > input,
+.row1 > select {
+  border: 1px solid black;
+  padding: 10px 3px;
+}
+.row1 > input:last-child {
+  grid-column: 1 / span 2;
 }
