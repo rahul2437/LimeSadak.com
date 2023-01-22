@@ -31,7 +31,6 @@ const Navbar = () => {
         </ul>
       </div>
       <div className={style.right}>
-        <Link to={"/signin"}>Login</Link>
         <Link>SCRAPBOOK</Link>
         <Link>SEARCH</Link>
         <Link to={"/cart"}>CART</Link>
