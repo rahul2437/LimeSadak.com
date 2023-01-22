@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useSearchParams } from "react-router-dom";
 import ProdBox from "../../components/prodBox/ProdBox";
 import ProdSidebar from "../../components/prodSidebar/ProdSidebar";
 import { getProductsSuccess } from "../../redux/ProductsReducer/actionCreator";
@@ -66,16 +66,20 @@ const Products = () => {
   const { token } = useSelector((store) => store.AuthReducer);
   const dispatch = useDispatch();
   const { products } = useSelector((store) => store.ProductsReducer);
-
+  const [searchParams] = useSearchParams();
+  const { gender } = searchParams.get("gender");
   useEffect(() => {
     try {
-      let res = fetch(`https://general-icicle-9828.vercel.app/products`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-      });
+      let res = fetch(
+        `https://general-icicle-9828.vercel.app/products?gender=${gender}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+        }
+      );
       let data = res.json();
       dispatch(getProductsSuccess(data.data));
     } catch (error) {

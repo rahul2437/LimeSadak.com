@@ -7,13 +7,15 @@ const Navbar = () => {
   return (
     <div className={style.navbar}>
       <div className={style.left}>
-        <img src={logo} alt="" />
+        <Link to={"/"}>
+          <img src={logo} alt="" />
+        </Link>
         <ul>
           <li>
-            <Link to="/">WOMEN</Link>
+            <Link to="/products?gender=female">WOMEN</Link>
           </li>
           <li>
-            <Link to="/">MEN</Link>
+            <Link to="/products?gender=male">MEN</Link>
           </li>
           <li>
             <Link to="/">KIDS</Link>
