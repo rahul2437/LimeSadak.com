@@ -1,0 +1,21 @@
+.prodBox{
+    /* border: 1px solid red; */
+}
+.prodBox > .details{
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+.prodBox > .details > div{
+    text-align: left;
+}
+.prodBox > .details > div > p:first-child > span{
+    color: grey;
+    font-size: 14px;
+}
+.prodBox > .details > div > p:last-child{
+    color: grey;
+    font-size: 12px;
+}
