@@ -9,11 +9,16 @@ import {
 
 import { ChevronDownIcon, HamburgerIcon } from "@chakra-ui/icons";
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import logo from "../../../src/assets/limesadak.jpg";
+import { signout } from "../../redux/AuthReducer/action";
 import style from "./Navbar.module.css";
 
 const Navbar = () => {
+  const { isAuth, user } = useSelector((store) => store.AuthReducer);
+  const dispatch = useDispatch();
+
   return (
     <div className={style.navbar}>
       <div className={style.ham}>
@@ -85,20 +90,28 @@ const Navbar = () => {
         <Link to={"/cart"}>CART</Link>
         <Menu>
           <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
-            PROFILE
+            {isAuth ? user.name : `PROFILE`}
           </MenuButton>
-          <MenuList>
-            <MenuItem>
-              <Link to="/signin">
-                <button>Sign In</button>
-              </Link>
-            </MenuItem>
-            <MenuItem>
-              <Link to="/signup">
-                <button>Sign Up</button>
-              </Link>
-            </MenuItem>
-          </MenuList>
+          {!isAuth ? (
+            <MenuList>
+              <MenuItem>
+                <Link to="/signin">
+                  <button>Sign In</button>
+                </Link>
+              </MenuItem>
+              <MenuItem>
+                <Link to="/signup">
+                  <button>Sign Up</button>
+                </Link>
+              </MenuItem>
+            </MenuList>
+          ) : (
+            <MenuList>
+              <MenuItem>
+                <button onClick={() => dispatch(signout())}>Sign out</button>
+              </MenuItem>
+            </MenuList>
+          )}
         </Menu>
       </div>
     </div>
