@@ -1,3 +1,11 @@
+import {
+  DragHandleIcon,
+  EmailIcon,
+  SettingsIcon,
+  StarIcon,
+  UnlockIcon,
+} from "@chakra-ui/icons";
+import { MenuItem, MenuList } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-router-dom";
 import logo from "../../../src/assets/limesadak.jpg";
@@ -31,6 +39,29 @@ const Navbar = () => {
         </ul>
       </div>
       <div className={style.right}>
+        <MenuList>
+          <MenuItem gap={"15px"}>
+            <DragHandleIcon /> <span>Profile</span>
+          </MenuItem>
+          <MenuItem gap={"15px"}>
+            <EmailIcon />
+            Message
+          </MenuItem>
+          <MenuItem gap={"15px"}>
+            {" "}
+            <StarIcon /> Project
+          </MenuItem>
+          <MenuItem gap={"15px"}>
+            {" "}
+            <SettingsIcon /> Setting
+          </MenuItem>
+          <Link to={"/signin"}>
+            <MenuItem gap={"15px"}>
+              {" "}
+              <UnlockIcon /> Logout
+            </MenuItem>
+          </Link>
+        </MenuList>
         <Link>SCRAPBOOK</Link>
         <Link>SEARCH</Link>
         <Link to={"/cart"}>CART</Link>
