@@ -1,7 +1,3 @@
-import React from 'react'
-import style from './Navbar.module.css'
-import {Link} from 'react-router-dom'
-import logo from "../../../src/assets/limesadak.jpg"
 import {
   Menu,
   MenuButton,
@@ -16,6 +12,10 @@ import {
 } from '@chakra-ui/react'
 
 import { ChevronDownIcon, HamburgerIcon } from '@chakra-ui/icons'
+import React from "react";
+import { Link } from "react-router-dom";
+import logo from "../../../src/assets/limesadak.jpg";
+import style from "./Navbar.module.css";
 
 const Navbar = () => {
   return (
@@ -78,7 +78,7 @@ const Navbar = () => {
         </Menu>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

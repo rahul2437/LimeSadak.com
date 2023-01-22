@@ -1,14 +1,11 @@
-import React from 'react'
 import {
-    Accordion,
-    AccordionItem,
-    AccordionButton,
-    AccordionPanel,
-    Box,
-  } from '@chakra-ui/react';
+    Accordion, AccordionButton, AccordionItem, AccordionPanel,
+    Box
+} from '@chakra-ui/react';
+import React from 'react';
 
-  import { MinusIcon, AddIcon } from '@chakra-ui/icons'
-  import style from './ProdSidebar.module.css'
+  import { AddIcon, MinusIcon } from '@chakra-ui/icons';
+import style from './ProdSidebar.module.css';
 
 const ProdSidebar = () => {
   return (
@@ -33,16 +30,16 @@ const ProdSidebar = () => {
                                 <AddIcon fontSize='12px' />
                                 )}
                             </AccordionButton>
-                 
+
                             <AccordionPanel pb={4}>
                                 <div style={{display:"flex", gap:"7px"}}><input type="radio" name="trending" id="trending"/> <p>Trending</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="radio" name="new" id="new"/> <p>New</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="radio" name="discounts" id="discounts"/> <p>Disounts</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="radio" name="hPrice" id="hPrice"/> <p>High Price</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="radio" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-                            
+
                             </AccordionPanel>
- 
+
                                     {/* PRICE  */}
 
                             <AccordionButton>
@@ -55,14 +52,14 @@ const ProdSidebar = () => {
                                 <AddIcon fontSize='12px' />
                                 )}
                             </AccordionButton>
-                            
+
                             <AccordionPanel pb={4}>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-                            
+
                             </AccordionPanel>
 
                                     {/* DISCOUNTS */}
@@ -77,14 +74,14 @@ const ProdSidebar = () => {
                                 <AddIcon fontSize='12px' />
                                 )}
                             </AccordionButton>
-                            
+
                             <AccordionPanel pb={4}>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-                            
+
                             </AccordionPanel>
 
                                     {/* SIZE */}
@@ -99,14 +96,14 @@ const ProdSidebar = () => {
                                 <AddIcon fontSize='12px' />
                                 )}
                             </AccordionButton>
-                            
+
                             <AccordionPanel pb={4}>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-                            
+
                             </AccordionPanel>
 
                                     {/* BRAND */}
@@ -121,14 +118,14 @@ const ProdSidebar = () => {
                                 <AddIcon fontSize='12px' />
                                 )}
                             </AccordionButton>
-                            
+
                             <AccordionPanel pb={4}>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-                            
+
                             </AccordionPanel>
 
                                     {/* CATEGORY */}
@@ -143,14 +140,14 @@ const ProdSidebar = () => {
                                 <AddIcon fontSize='12px' />
                                 )}
                             </AccordionButton>
-                            
+
                             <AccordionPanel pb={4}>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-                            
+
                             </AccordionPanel>
 
                                     {/* TYPE */}
@@ -165,14 +162,14 @@ const ProdSidebar = () => {
                                 <AddIcon fontSize='12px' />
                                 )}
                             </AccordionButton>
-                            
+
                             <AccordionPanel pb={4}>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
                                 <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-                            
+
                             </AccordionPanel>
                         </>
                         )}

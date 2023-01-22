@@ -6,7 +6,6 @@ import RightItemBox from "../../components/Cart-Components/RightItemBox";
 // import Footer from "../Components/Footer/Footer";
 
 const Cart = () => {
-  // const user = useSelector((store) => console.log(store)); //For testing
   return (
     <CartContainer>
       <CartNav />

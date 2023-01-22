@@ -1,13 +1,12 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import {
   BaseHeader,
+  Text,
+  TextLineThrough,
   ToLeft,
   ToRight,
-  TextLineThrough,
-  Text,
   TotalPriceBox,
 } from "./StyledComponents";
 import { CalculateTotal } from "./TotalCalculator";
@@ -15,7 +14,7 @@ import { CalculateTotal } from "./TotalCalculator";
 const PriceDetails = () => {
   const [totalMrp, setTotalMrp] = useState(0);
   const [totalAmount, setTotalAmount] = useState(0);
-  const cartItems = useSelector((store) => store.AuthReducer.cart);
+  const cartItems = useSelector((store) => store.CartReducer.cart);
   const maxPrice = CalculateTotal(cartItems, "product_strike");
   const actualAmount = CalculateTotal(cartItems, "product_discountedPrice");
   useEffect(() => {
