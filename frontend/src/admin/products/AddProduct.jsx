@@ -1,4 +1,3 @@
-import axios from "axios";
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import AdminNavbar from "../../components/adminNavbar/AdminNavbar";
@@ -17,26 +16,25 @@ const initState = {
   price: 99,
 };
 
-const manualToken = `eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2M2M5MDE5MTI5ZTJkMmI1MzQ2N2EyMDMiLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2NzQzNjU3MzcsImV4cCI6MTY3NDM3NjUzN30.yoS16tiZ02_CziHHqmDjNBXPi-seTxLKy8rQusMHU7s`;
-
 const AddProduct = () => {
-  const { token } = useSelector((store) => store.AuthReducer) || manualToken;
-
+  const { token } = useSelector((store) => store.AuthReducer);
   const [product, setProduct] = useState(initState);
-
+  console.log(product);
   const addProduct = async (e) => {
     e.preventDefault();
-    console.log(product);
-    const headers = {
-      "Content-Type": `application/json`,
-      Authorization: manualToken,
-    };
     try {
-      let data = await axios.post(
+      let res = await fetch(
         `https://general-icicle-9828.vercel.app/products/add`,
-        product,
-        headers
+        {
+          method: "POST",
+          body: JSON.stringify(product),
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+        }
       );
+      let data = await res.json();
       console.log(data);
     } catch (error) {
       console.log({ error });
@@ -99,6 +97,9 @@ const AddProduct = () => {
                 ></textarea>
                 <label>Product Color</label>
                 <select onChange={(e) => data(e)} name="color" id="color">
+                  <option selected value="">
+                    Please select one
+                  </option>
                   <option value="red">Red</option>
                   <option value="blue">Blue</option>
                   <option value="orange">Orange</option>
@@ -106,6 +107,9 @@ const AddProduct = () => {
                 </select>
                 <label>Product For which gender</label>
                 <select onChange={(e) => data(e)} name="gender" id="gender">
+                  <option selected value="">
+                    Please select one
+                  </option>
                   <option value="male">Male</option>
                   <option value="female">Female</option>
                 </select>

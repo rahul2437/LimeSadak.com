@@ -15,6 +15,7 @@ const reducer = (state = initialState, action) => {
     case types.LOGIN_REQUEST:
       return { ...state, isLoading: true };
     case types.LOGIN_SUCCESS:
+      localStorage.setItem("user", JSON.stringify(payload));
       return {
         ...state,
         isLoading: false,
