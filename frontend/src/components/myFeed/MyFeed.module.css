@@ -1,5 +1,6 @@
 .myFeed{
     text-align: center;
+    /* border: 1px solid green; */
 }
 .myFeed > img{
     width: 60%;
@@ -8,4 +9,11 @@
 }
 .myFeed > p{
     font-size: 10px;
+}
+
+@media all and (min-width:320px) and (max-width:481px){
+    .myFeed > img{
+        width: 150%;
+        /* border: 1px solid red; */
+    }
 }

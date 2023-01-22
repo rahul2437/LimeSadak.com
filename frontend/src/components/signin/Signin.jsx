@@ -23,10 +23,22 @@ const Signin = () => {
   };
 
   return (
-    <div>
-      <h1>SIGN-IN</h1>
+    <div className="container">
+
+    {/* TOP */}
+
+      <div className="top">
+        <img src="https://img1.junaroad.com/assets/images/mobileNotif/1526210608201.jpg" alt="" />
+        <div>
+          <img src="https://img1.junaroad.com/assets/images/mobileNotif/1525951378657.jpg" alt="" /><span>SIGN IN</span>
+          <p>sign in to proceed further</p>
+        </div>
+      </div>
+
+      {/* BOTTOM */}
+
+      <div className="bottom">
       <form id="signin-form" onSubmit={onSubmit}>
-        <label>Email</label>
         <input
           onChange={(e) => onChange(e)}
           placeholder="Enter Email"
@@ -34,7 +46,6 @@ const Signin = () => {
           name="email"
           required
         />
-        <label>Password</label>
         <input
           onChange={(e) => onChange(e)}
           placeholder="Enter Password"
@@ -44,6 +55,10 @@ const Signin = () => {
         />
         <input type="submit" value="SIGNIN" id="signin" />
       </form>
+      </div>
+
+      
+      
     </div>
   );
 };

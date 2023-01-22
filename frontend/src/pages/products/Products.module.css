@@ -21,3 +21,20 @@
     position: relative;
     left: 17%;
 }
+
+/* Mobile Responsiveness */
+
+@media all and (min-width:320px) and (max-width:481px){
+    .products > .left{
+        display: none;
+    }
+    .products > .right{
+        width: 100%;
+    } 
+    .products > .right{
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0;
+        left: 0;
+        gap:0;
+    } 
+}
