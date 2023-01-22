@@ -1,5 +1,5 @@
-import * as types from "./actionTypes";
 import axios from "axios";
+import * as types from "./actionTypes";
 
 let getProductsRequest = () => {
   return { type: types.GET_PRODUCTS_REQUEST };
@@ -13,17 +13,13 @@ let getProductsFailure = () => {
   return { type: types.GET_PRODUCTS_FAILURE };
 };
 
-const getProducts = (queryParams) => (dispatch) => {
+const getProducts = () => (dispatch) => {
   dispatch(getProductsRequest());
   axios
-    .get(
-      // `https://shoppingbazaar.onrender.com/api/men_products`,
-      `https://general-icicle-9828.vercel.app/products`,
-      queryParams
-    )
+    .get(`https://general-icicle-9828.vercel.app/products`)
     .then((res) => {
-      // console.log(res);
-      dispatch(getProductsSuccess(res.data));
+      console.log(res.data?.data);
+      dispatch(getProductsSuccess(res.data?.data));
     })
     .catch((err) => {
       console.log(err);

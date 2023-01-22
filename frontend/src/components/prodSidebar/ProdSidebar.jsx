@@ -1,183 +1,277 @@
 import {
-    Accordion, AccordionButton, AccordionItem, AccordionPanel,
-    Box
-} from '@chakra-ui/react';
-import React from 'react';
+  Accordion,
+  AccordionButton,
+  AccordionItem,
+  AccordionPanel,
+  Box,
+} from "@chakra-ui/react";
+import React from "react";
 
-  import { AddIcon, MinusIcon } from '@chakra-ui/icons';
-import style from './ProdSidebar.module.css';
+import { AddIcon, MinusIcon } from "@chakra-ui/icons";
+import style from "./ProdSidebar.module.css";
 
 const ProdSidebar = () => {
   return (
     <>
-    <div className={style.top}>
-                <p>Mens Fashion - T Shirts, Suits, Blazers & Jeans</p>
-                <p>60883 products</p>
-            </div>
-            <div className={style.bottom}>
-                <p>FILTER & SORT</p>
-                <Accordion allowMultiple>
-                    <AccordionItem>
-                        {({ isExpanded }) => (
-                        <>
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                <p>Sort by</p>
-                                </Box>
-                                {isExpanded ? (
-                                <MinusIcon fontSize='12px' />
-                                ) : (
-                                <AddIcon fontSize='12px' />
-                                )}
-                            </AccordionButton>
+      <div className={style.top}>
+        <p>Mens Fashion - T Shirts, Suits, Blazers & Jeans</p>
+        <p>60883 products</p>
+      </div>
+      <div className={style.bottom}>
+        <p>FILTER & SORT</p>
+        <Accordion allowMultiple>
+          <AccordionItem>
+            {({ isExpanded }) => (
+              <>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <p>Sort by</p>
+                  </Box>
+                  {isExpanded ? (
+                    <MinusIcon fontSize="12px" />
+                  ) : (
+                    <AddIcon fontSize="12px" />
+                  )}
+                </AccordionButton>
 
-                            <AccordionPanel pb={4}>
-                                <div style={{display:"flex", gap:"7px"}}><input type="radio" name="trending" id="trending"/> <p>Trending</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="radio" name="new" id="new"/> <p>New</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="radio" name="discounts" id="discounts"/> <p>Disounts</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="radio" name="hPrice" id="hPrice"/> <p>High Price</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="radio" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
+                <AccordionPanel pb={4}>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="radio" name="trending" id="trending" />{" "}
+                    <p>Trending</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="radio" name="new" id="new" /> <p>New</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="radio" name="discounts" id="discounts" />{" "}
+                    <p>Disounts</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="radio" name="hPrice" id="hPrice" />{" "}
+                    <p>High Price</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="radio" name="lPrice" id="lPrice" />{" "}
+                    <p>Low Price</p>
+                  </div>
+                </AccordionPanel>
 
-                            </AccordionPanel>
+                {/* PRICE  */}
 
-                                    {/* PRICE  */}
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <p>Price</p>
+                  </Box>
+                  {isExpanded ? (
+                    <MinusIcon fontSize="12px" />
+                  ) : (
+                    <AddIcon fontSize="12px" />
+                  )}
+                </AccordionButton>
 
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                <p>Price</p>
-                                </Box>
-                                {isExpanded ? (
-                                <MinusIcon fontSize='12px' />
-                                ) : (
-                                <AddIcon fontSize='12px' />
-                                )}
-                            </AccordionButton>
+                <AccordionPanel pb={4}>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="trending" id="trending" />{" "}
+                    <p>Trending</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="new" id="new" /> <p>New</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="discounts" id="discounts" />{" "}
+                    <p>Disounts</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="hPrice" id="hPrice" />{" "}
+                    <p>High Price</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="lPrice" id="lPrice" />{" "}
+                    <p>Low Price</p>
+                  </div>
+                </AccordionPanel>
 
-                            <AccordionPanel pb={4}>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
+                {/* DISCOUNTS */}
 
-                            </AccordionPanel>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <p>Price</p>
+                  </Box>
+                  {isExpanded ? (
+                    <MinusIcon fontSize="12px" />
+                  ) : (
+                    <AddIcon fontSize="12px" />
+                  )}
+                </AccordionButton>
 
-                                    {/* DISCOUNTS */}
+                <AccordionPanel pb={4}>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="trending" id="trending" />{" "}
+                    <p>Trending</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="new" id="new" /> <p>New</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="discounts" id="discounts" />{" "}
+                    <p>Disounts</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="hPrice" id="hPrice" />{" "}
+                    <p>High Price</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="lPrice" id="lPrice" />{" "}
+                    <p>Low Price</p>
+                  </div>
+                </AccordionPanel>
 
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                <p>Price</p>
-                                </Box>
-                                {isExpanded ? (
-                                <MinusIcon fontSize='12px' />
-                                ) : (
-                                <AddIcon fontSize='12px' />
-                                )}
-                            </AccordionButton>
+                {/* SIZE */}
 
-                            <AccordionPanel pb={4}>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <p>Price</p>
+                  </Box>
+                  {isExpanded ? (
+                    <MinusIcon fontSize="12px" />
+                  ) : (
+                    <AddIcon fontSize="12px" />
+                  )}
+                </AccordionButton>
 
-                            </AccordionPanel>
+                <AccordionPanel pb={4}>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="trending" id="trending" />{" "}
+                    <p>Trending</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="new" id="new" /> <p>New</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="discounts" id="discounts" />{" "}
+                    <p>Disounts</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="hPrice" id="hPrice" />{" "}
+                    <p>High Price</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="lPrice" id="lPrice" />{" "}
+                    <p>Low Price</p>
+                  </div>
+                </AccordionPanel>
 
-                                    {/* SIZE */}
+                {/* BRAND */}
 
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                <p>Price</p>
-                                </Box>
-                                {isExpanded ? (
-                                <MinusIcon fontSize='12px' />
-                                ) : (
-                                <AddIcon fontSize='12px' />
-                                )}
-                            </AccordionButton>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <p>Price</p>
+                  </Box>
+                  {isExpanded ? (
+                    <MinusIcon fontSize="12px" />
+                  ) : (
+                    <AddIcon fontSize="12px" />
+                  )}
+                </AccordionButton>
 
-                            <AccordionPanel pb={4}>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
+                <AccordionPanel pb={4}>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="trending" id="trending" />{" "}
+                    <p>Trending</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="new" id="new" /> <p>New</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="discounts" id="discounts" />{" "}
+                    <p>Disounts</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="hPrice" id="hPrice" />{" "}
+                    <p>High Price</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="lPrice" id="lPrice" />{" "}
+                    <p>Low Price</p>
+                  </div>
+                </AccordionPanel>
 
-                            </AccordionPanel>
+                {/* CATEGORY */}
 
-                                    {/* BRAND */}
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <p>Price</p>
+                  </Box>
+                  {isExpanded ? (
+                    <MinusIcon fontSize="12px" />
+                  ) : (
+                    <AddIcon fontSize="12px" />
+                  )}
+                </AccordionButton>
 
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                <p>Price</p>
-                                </Box>
-                                {isExpanded ? (
-                                <MinusIcon fontSize='12px' />
-                                ) : (
-                                <AddIcon fontSize='12px' />
-                                )}
-                            </AccordionButton>
+                <AccordionPanel pb={4}>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="trending" id="trending" />{" "}
+                    <p>Trending</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="new" id="new" /> <p>New</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="discounts" id="discounts" />{" "}
+                    <p>Disounts</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="hPrice" id="hPrice" />{" "}
+                    <p>High Price</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="lPrice" id="lPrice" />{" "}
+                    <p>Low Price</p>
+                  </div>
+                </AccordionPanel>
 
-                            <AccordionPanel pb={4}>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
+                {/* TYPE */}
 
-                            </AccordionPanel>
+                <AccordionButton>
+                  <Box as="span" flex="1" textAlign="left">
+                    <p>Price</p>
+                  </Box>
+                  {isExpanded ? (
+                    <MinusIcon fontSize="12px" />
+                  ) : (
+                    <AddIcon fontSize="12px" />
+                  )}
+                </AccordionButton>
 
-                                    {/* CATEGORY */}
+                <AccordionPanel pb={4}>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="trending" id="trending" />{" "}
+                    <p>Trending</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="new" id="new" /> <p>New</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="discounts" id="discounts" />{" "}
+                    <p>Disounts</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="hPrice" id="hPrice" />{" "}
+                    <p>High Price</p>
+                  </div>
+                  <div style={{ display: "flex", gap: "7px" }}>
+                    <input type="checkbox" name="lPrice" id="lPrice" />{" "}
+                    <p>Low Price</p>
+                  </div>
+                </AccordionPanel>
+              </>
+            )}
+          </AccordionItem>
+        </Accordion>
+      </div>
+    </>
+  );
+};
 
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                <p>Price</p>
-                                </Box>
-                                {isExpanded ? (
-                                <MinusIcon fontSize='12px' />
-                                ) : (
-                                <AddIcon fontSize='12px' />
-                                )}
-                            </AccordionButton>
-
-                            <AccordionPanel pb={4}>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-
-                            </AccordionPanel>
-
-                                    {/* TYPE */}
-
-                            <AccordionButton>
-                                <Box as="span" flex='1' textAlign='left'>
-                                <p>Price</p>
-                                </Box>
-                                {isExpanded ? (
-                                <MinusIcon fontSize='12px' />
-                                ) : (
-                                <AddIcon fontSize='12px' />
-                                )}
-                            </AccordionButton>
-
-                            <AccordionPanel pb={4}>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="trending" id="trending"/> <p>Trending</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="new" id="new"/> <p>New</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="discounts" id="discounts"/> <p>Disounts</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="hPrice" id="hPrice"/> <p>High Price</p></div>
-                                <div style={{display:"flex", gap:"7px"}}><input type="checkbox" name="lPrice" id="lPrice"/> <p>Low Price</p></div>
-
-                            </AccordionPanel>
-                        </>
-                        )}
-                    </AccordionItem>
-                    </Accordion>
-            </div>
-        </>
-  )
-}
-
-export default ProdSidebar
+export default ProdSidebar;
