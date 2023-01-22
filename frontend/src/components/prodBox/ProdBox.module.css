@@ -1,6 +1,3 @@
-.prodBox{
-    /* border: 1px solid red; */
-}
 .prodBox > .details{
     background-color: white;
     display: flex;
