@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signin } from "../../redux/AuthReducer/action";
-import AdminNavbar from "../adminNavbar/AdminNavbar";
 import "./Signin.css";
 
 const initForm = {
@@ -25,7 +24,6 @@ const Signin = () => {
 
   return (
     <div>
-      <AdminNavbar />
       <h1>SIGN-IN</h1>
       <form id="signin-form" onSubmit={onSubmit}>
         <label>Email</label>

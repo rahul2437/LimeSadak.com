@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { signup } from "../../redux/AuthReducer/action";
-import AdminNavbar from "../adminNavbar/AdminNavbar";
 import "./Signup.css";
 
 const initForm = {
@@ -27,8 +26,7 @@ const Signup = () => {
   };
 
   return (
-    <div>
-      <AdminNavbar />
+    <div style={{paddingTop:"60px"}}>
       <h1>SIGN-UP</h1>
       <form id="signup-form" onSubmit={onSubmit}>
         <label>Name</label>

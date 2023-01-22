@@ -31,6 +31,6 @@ const getProducts = (queryParams) => (dispatch) => {
     });
 };
 
-export { getProducts };
+export { getProducts, getProductsSuccess };
 
 // ?_page=2&_limit=35
