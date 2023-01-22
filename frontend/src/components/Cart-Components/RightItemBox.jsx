@@ -1,8 +1,8 @@
 import React from "react";
-import styled from "styled-components";
 import { MdKeyboardArrowRight, MdLocalOffer } from "react-icons/md";
 import { TbDiscount2 } from "react-icons/tb";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 import Button from "./Button";
 import PriceDetails from "./PriceDetails";
 import RightContentBox from "./RightContentBox";
@@ -53,7 +53,7 @@ const RightItemBox = () => {
       <PriceDetails />
 
       <div>
-        <Link to={"/address"}>
+        <Link to={"/payment"}>
           <Button
             color={"white"}
             border="none"

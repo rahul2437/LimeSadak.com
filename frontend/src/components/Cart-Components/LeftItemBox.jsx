@@ -1,17 +1,13 @@
 import React from "react";
+import { useSelector } from "react-redux";
 import styled from "styled-components";
-import AddressBox from "./AddressBox";
-import Button from "./Button";
 import CartItem from "./CartItem";
 import ConvenienceBox from "./ConvenienceBox";
-import OfferBox from "./OfferBox";
-import { HiOutlineClipboardList } from "react-icons/hi";
 import LeftContentBox from "./LeftContentBox";
-import { useSelector } from "react-redux";
 // import { Link } from "react-router-dom";
 
 const LeftItemBox = () => {
-  const store = useSelector((store) => store.AuthReducer);
+  const store = useSelector((store) => store.CartReducer);
   const {
     address: { address, city, locality, pinCode, state, town },
     cart,
