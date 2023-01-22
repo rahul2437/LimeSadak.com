@@ -11,10 +11,10 @@ const { requireSignIn, vendorValidate } = require("../middlewares/validator");
 
 const productRouter = express.Router();
 
-productRouter.get("/", requireSignIn, getProducts);
-productRouter.post("/add", vendorValidate, productValidate, addProduct);
-productRouter.get("/:id", requireSignIn, getSingleProduct);
-productRouter.put("/:id", vendorValidate, updateProduct);
-productRouter.delete("/:id", vendorValidate, deleteProduct);
+productRouter.get("/", getProducts);
+productRouter.post("/add", productValidate, addProduct);
+productRouter.get("/:id", getSingleProduct);
+productRouter.put("/:id", updateProduct);
+productRouter.delete("/:id", deleteProduct);
 
 module.exports = { productRouter };

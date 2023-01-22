@@ -67,7 +67,9 @@ const Products = () => {
   const dispatch = useDispatch();
   const { products } = useSelector((store) => store.ProductsReducer);
   const [searchParams] = useSearchParams();
+  console.log(searchParams);
   const { gender } = searchParams.get("gender");
+  console.log(gender);
   useEffect(() => {
     try {
       let res = fetch(
